@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Chatte App</string>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">none</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search for users ....</string>
+    <string name="reset_password">Forget your password?</string>
+    <string name="type_a_message">Type a message...</string>
+    <string name="register_btn">Register</string>
+    <string name="create_new_account">Create new account?</string>>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget Password?</string>
+</resources>

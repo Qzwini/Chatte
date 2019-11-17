@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cfcfcf"
+    tools:context=".MessageActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/MenuStyle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_id"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+
+            <TextView
+                android:id="@+id/Username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#FFF"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:layout_toRightOf="@id/profile_id"
+                android:layout_toEndOf="@id/profile_id" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    app:civ_border_width="10dp"
+                    app:civ_border_color="#bfbfbf"
+                    android:id="@+id/img_off"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_below="@id/Username"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="-15dp"
+                    android:layout_toRightOf="@id/profile_id"
+                    android:layout_toEndOf="@id/profile_id"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    app:civ_border_width="10dp"
+                    app:civ_border_color="#05df29"
+                    android:id="@+id/img_on"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_below="@id/Username"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="-15dp"
+                    android:layout_toRightOf="@id/profile_id"
+                    android:layout_toEndOf="@id/profile_id"/>
+
+            </RelativeLayout>
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="#FFF"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_send"
+            android:layout_toLeftOf="@id/btn_send"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:hint="Type a message..."
+            android:layout_toStartOf="@id/btn_send" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/send"
+            android:id="@+id/btn_send"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id = "@+id/recycler"
+        android:layout_below = "@id/bar_layout"
+        android:layout_above = "@id/bottom"  />
+
+</RelativeLayout>
