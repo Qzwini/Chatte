@@ -2,5 +2,5 @@
 Simple Chat Application
 
 
-![](images/1.png)
+![](images/1.jpg)
 
